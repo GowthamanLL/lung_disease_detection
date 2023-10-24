@@ -4,15 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    
+        .container{
+            width:50%;
+            height: 200px;
+            border: 2px solid black;
+            margin:auto;
+
+            padding: 10px;
+            margin-top: 150px;
+            background-color: bisque;
+        }
+        .container h1{
+            translate: 200px;
+        }
+        .container form{
+            translate: 250px;
+        }
+         
+
+    </style>
 </head>
 <body>
     <!-- myapp/templates/upload.html -->
 <!-- myapp/templates/upload.html -->
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="image">
-    <button type="submit">Upload</button>
-</form>
+<div class="container">
+    <h1>Lungs Disease Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <br>
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
 
 
 </body>

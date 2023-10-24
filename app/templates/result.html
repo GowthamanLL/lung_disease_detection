@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
 </head>
-<body>
+<body >
     <!-- myapp/templates/prediction.html -->
 <!-- myapp/templates/prediction.html -->
+<h1>Lungs Disease Detection</h1>
 <h1>Prediction Result:</h1>
 {% if result == "normal" %}
 <center><img src="{% static 'normal.png' %}" alt="Uploaded Image"></center>
+<h1 style="color: rgb(53, 180, 53)">Person is safe.</h1>
 {% else %}
-<center><img src="{% static 'unhealthy.jpg' %}" alt="Uploaded Image"></center>
+<center><img src="{% static 'unhealth.jpeg' %}" alt="Uploaded Image"></center>
+<h1 style="color: red">Person is affected with Pneumonia.</h1>
 {% endif %}
-
-<p>{{ result }}</p>
 
 
 </body>
